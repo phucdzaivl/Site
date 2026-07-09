@@ -83,9 +83,16 @@ function getLink(){
 }
 
 function claim(){
-    document.getElementById("msg").innerHTML="🎉 Chúc mừng! Bạn đã nhận quà thành công!";
-}
-</script>
+    let last = localStorage.getItem("lastClaim");
+    let today = new Date().toDateString();
 
-</body>
-</html>
+    if(last === today){
+        alert("Bạn đã nhận quà hôm nay rồi!");
+        return;
+    }
+
+    localStorage.setItem("lastClaim", today);
+
+    // Link phần thưởng
+    window.location.href = "https://link-phan-thuong.com";
+}
