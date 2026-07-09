@@ -74,6 +74,8 @@ button:hover:not(:disabled){
 </div>
 
 <script>
+    // true = còn máy, false= hết máy ,//
+const CON_MAY = true;
 function getLink(){
     document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
     document.getElementById("claim").disabled=false;
@@ -83,6 +85,12 @@ function getLink(){
 }
 
 function claim(){
+
+    if(!CON_MAY){
+        alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");
+        return;
+    }
+
     let last = localStorage.getItem("lastClaim");
     let today = new Date().toDateString();
 
@@ -95,4 +103,4 @@ function claim(){
 
     // Link phần thưởng
     window.location.href = "https://link-phan-thuong.com";
-}
+    }
