@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhận Quà</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.box{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    width:320px;
+}
+
+button{
+    width:220px;
+    padding:14px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#getLink{
+    background:#ff9800;
+}
+
+#claim{
+    background:#4CAF50;
+}
+
+button:disabled{
+    background:#999;
+    cursor:not-allowed;
+}
+
+button:hover:not(:disabled){
+    transform:scale(1.05);
+}
+
+#msg{
+    margin-top:15px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>🎁 Nhận Quà</h2>
+
+<button id="getLink" onclick="getLink()">🔗 Get Link</button>
+
+<button id="claim" onclick="claim()" disabled>🎉 Nhận Quà</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+function getLink(){
+    document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
+    document.getElementById("claim").disabled=false;
+
+    // Thay link này bằng link của bạn
+    window.open("https://example.com","_blank");
+}
+
+function claim(){
+    document.getElementById("msg").innerHTML="🎉 Chúc mừng! Bạn đã nhận quà thành công!";
+}
+</script>
+
+</body>
+</html>
