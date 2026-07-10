@@ -1,83 +1,54 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎁Nhận Code Ugphone 4h Free (By Phuc Ngo)🎁</title>
-<style>
-body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial,sans-serif;background:linear-gradient(135deg,#6a11cb,#2575fc)}
-.box{background:#fff;padding:35px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);width:340px}
-button{width:220px;padding:14px;margin:10px;border:none;border-radius:30px;color:#fff;font-size:18px;cursor:pointer}
-#getLink{background:#ff9800}#claim,#checkBtn,#copyBtn{background:#4CAF50}
-button:disabled{background:#999}.hidden{display:none}
-input{padding:10px;width:220px;border-radius:10px;border:1px solid #ccc;text-align:center}
-</style>
-</head>
-<body>
-<div class="box">
-<h2>🎁 Nhận Quà</h2>
-<button id="getLink" onclick="getLink()">🔗 Get Link</button>
-<button id="claim" onclick="claim()" disabled>🎉 Nhận Code</button>
-<p id="msg"></p>
-<div id="claimBox" class="hidden">
-<input id="giftCode" placeholder="Nhập mã"><br>
-<button id="checkBtn" onclick="checkCode()">Xác nhận</button>
-<p id="result"></p>
-<div id="rewardBox" class="hidden">
-<input id="rewardLink" readonly value="">
-<button id="copyBtn" onclick="copyLink()">📋 Sao chép Link</button>
-</div>
-</div>
-</div>
-<script>
-const CON_MAY=true;
-const REWARDS = {
-    "idknguhaha": "https://link1.com",
-    "nguvailoz": "https://link2.com",
-    "kk": "https://link3.com",
-    "memaybeo": "https://link4.com",
-    "nhincc": "https://link5.com"
-};
-function getLink(){
- document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
- document.getElementById("claim").disabled=false;
- window.open("https://notevn.com/share/uv7azxu0","_blank");
-}
-function claim(){
- if(!CON_MAY){alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");return;}
- let last=localStorage.getItem("lastClaim");
- let today=new Date().toDateString();
- if(last===today){alert("Bạn đã nhận code hôm nay rồi!");return;}
- document.getElementById("claimBox").classList.remove("hidden");
-}
-function checkCode(){
-
-    let code = document.getElementById("giftCode").value.trim();
-
-    if(REWARDS[code]){
-
-        localStorage.setItem("lastClaim", new Date().toDateString());
-
-        document.getElementById("result").style.color = "green";
-        document.getElementById("result").innerHTML = "✅ Mã đúng!";
-
-        // Hiện đúng link của mã đó
-        document.getElementById("rewardLink").value = REWARDS[code];
-
-        document.getElementById("rewardBox").classList.remove("hidden");
-
-    }else{
-
-        document.getElementById("result").style.color = "red";
-        document.getElementById("result").innerHTML = "❌ Mã sai!";
-
-        document.getElementById("rewardBox").classList.add("hidden");
-    }
-}
-function copyLink(){
- const input=document.getElementById("rewardLink");
- navigator.clipboard.writeText(input.value);
- alert("Đã sao chép link!");
-}
-</script>
-</body></html>
+PCFET0NUWVBFIGh0bWw-CjxodG1sIGxhbmc9InZpIj4KPGhlYWQ-CjxtZXRhIGNoYXJzZXQ9IlVU
+Ri04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwg
+aW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU-8J-OgU5o4bqtbiBDb2RlIFVncGhvbmUgNGggRnJl
+ZSAoQnkgUGh1YyBOZ28p8J-OgTwvdGl0bGU-CjxzdHlsZT4KYm9keXttYXJnaW46MDtkaXNwbGF5
+OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7aGVpZ2h0OjEw
+MHZoO2ZvbnQtZmFtaWx5OkFyaWFsLHNhbnMtc2VyaWY7YmFja2dyb3VuZDpsaW5lYXItZ3JhZGll
+bnQoMTM1ZGVnLCM2YTExY2IsIzI1NzVmYyl9Ci5ib3h7YmFja2dyb3VuZDojZmZmO3BhZGRpbmc6
+MzVweDtib3JkZXItcmFkaXVzOjIwcHg7dGV4dC1hbGlnbjpjZW50ZXI7Ym94LXNoYWRvdzowIDEw
+cHggMzBweCByZ2JhKDAsMCwwLC4yNSk7d2lkdGg6MzQwcHh9CmJ1dHRvbnt3aWR0aDoyMjBweDtw
+YWRkaW5nOjE0cHg7bWFyZ2luOjEwcHg7Ym9yZGVyOm5vbmU7Ym9yZGVyLXJhZGl1czozMHB4O2Nv
+bG9yOiNmZmY7Zm9udC1zaXplOjE4cHg7Y3Vyc29yOnBvaW50ZXJ9CiNnZXRMaW5re2JhY2tncm91
+bmQ6I2ZmOTgwMH0jY2xhaW0sI2NoZWNrQnRuLCNjb3B5QnRue2JhY2tncm91bmQ6IzRDQUY1MH0K
+YnV0dG9uOmRpc2FibGVke2JhY2tncm91bmQ6Izk5OX0uaGlkZGVue2Rpc3BsYXk6bm9uZX0KaW5w
+dXR7cGFkZGluZzoxMHB4O3dpZHRoOjIyMHB4O2JvcmRlci1yYWRpdXM6MTBweDtib3JkZXI6MXB4
+IHNvbGlkICNjY2M7dGV4dC1hbGlnbjpjZW50ZXJ9Cjwvc3R5bGU-CjwvaGVhZD4KPGJvZHk-Cjxk
+aXYgY2xhc3M9ImJveCI-CjxoMj7wn46BIE5o4bqtbiBRdcOgPC9oMj4KPGJ1dHRvbiBpZD0iZ2V0
+TGluayIgb25jbGljaz0iZ2V0TGluaygpIj7wn5SXIEdldCBMaW5rPC9idXR0b24-CjxidXR0b24g
+aWQ9ImNsYWltIiBvbmNsaWNrPSJjbGFpbSgpIiBkaXNhYmxlZD7wn46JIE5o4bqtbiBDb2RlPC9i
+dXR0b24-CjxwIGlkPSJtc2ciPjwvcD4KPGRpdiBpZD0iY2xhaW1Cb3giIGNsYXNzPSJoaWRkZW4i
+Pgo8aW5wdXQgaWQ9ImdpZnRDb2RlIiBwbGFjZWhvbGRlcj0iTmjhuq1wIG3DoyI-PGJyPgo8YnV0
+dG9uIGlkPSJjaGVja0J0biIgb25jbGljaz0iY2hlY2tDb2RlKCkiPljDoWMgbmjhuq1uPC9idXR0
+b24-CjxwIGlkPSJyZXN1bHQiPjwvcD4KPGRpdiBpZD0icmV3YXJkQm94IiBjbGFzcz0iaGlkZGVu
+Ij4KPGlucHV0IGlkPSJyZXdhcmRMaW5rIiByZWFkb25seSB2YWx1ZT0iIj4KPGJ1dHRvbiBpZD0i
+Y29weUJ0biIgb25jbGljaz0iY29weUxpbmsoKSI-8J-TiyBTYW8gY2jDqXAgTGluazwvYnV0dG9u
+Pgo8L2Rpdj4KPC9kaXY-CjwvZGl2Pgo8c2NyaXB0Pgpjb25zdCBDT05fTUFZPXRydWU7CmNvbnN0
+IFJFV0FSRFMgPSB7CiAgICAiaWRrbmd1aGFoYSI6ICJodHRwczovL2xpbmsxLmNvbSIsCiAgICAi
+bmd1dmFpbG96IjogImh0dHBzOi8vbGluazIuY29tIiwKICAgICJrayI6ICJodHRwczovL2xpbmsz
+LmNvbSIsCiAgICAibWVtYXliZW8iOiAiaHR0cHM6Ly9saW5rNC5jb20iLAogICAgIm5oaW5jYyI6
+ICJodHRwczovL2xpbms1LmNvbSIKfTsKZnVuY3Rpb24gZ2V0TGluaygpewogZG9jdW1lbnQuZ2V0
+RWxlbWVudEJ5SWQoIm1zZyIpLmlubmVySFRNTD0i4pyFIEzhuqV5IGxpbmsgdGjDoG5oIGPDtG5n
+ISI7CiBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiY2xhaW0iKS5kaXNhYmxlZD1mYWxzZTsKIHdp
+bmRvdy5vcGVuKCJodHRwczovL25vdGV2bi5jb20vc2hhcmUvdXY3YXp4dTAiLCJfYmxhbmsiKTsK
+fQpmdW5jdGlvbiBjbGFpbSgpewogaWYoIUNPTl9NQVkpe2FsZXJ0KCLinYwgxJDDoyBo4bq_dCBt
+w6F5ISBWdWkgbMOybmcgY2jhu50gQWRtaW4gdGjDqm0gbcOheS4iKTtyZXR1cm47fQogbGV0IGxh
+c3Q9bG9jYWxTdG9yYWdlLmdldEl0ZW0oImxhc3RDbGFpbSIpOwogbGV0IHRvZGF5PW5ldyBEYXRl
+KCkudG9EYXRlU3RyaW5nKCk7CiBpZihsYXN0PT09dG9kYXkpe2FsZXJ0KCJC4bqhbiDEkcOjIG5o
+4bqtbiBjb2RlIGjDtG0gbmF5IHLhu5NpISIpO3JldHVybjt9CiBkb2N1bWVudC5nZXRFbGVtZW50
+QnlJZCgiY2xhaW1Cb3giKS5jbGFzc0xpc3QucmVtb3ZlKCJoaWRkZW4iKTsKfQpmdW5jdGlvbiBj
+aGVja0NvZGUoKXsKCiAgICBsZXQgY29kZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJnaWZ0
+Q29kZSIpLnZhbHVlLnRyaW0oKTsKCiAgICBpZihSRVdBUkRTW2NvZGVdKXsKCiAgICAgICAgbG9j
+YWxTdG9yYWdlLnNldEl0ZW0oImxhc3RDbGFpbSIsIG5ldyBEYXRlKCkudG9EYXRlU3RyaW5nKCkp
+OwoKICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVzdWx0Iikuc3R5bGUuY29sb3Ig
+PSAiZ3JlZW4iOwogICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyZXN1bHQiKS5pbm5l
+ckhUTUwgPSAi4pyFIE3DoyDEkcO6bmchIjsKCiAgICAgICAgLy8gSGnhu4duIMSRw7puZyBsaW5r
+IGPhu6dhIG3DoyDEkcOzCiAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJld2FyZExp
+bmsiKS52YWx1ZSA9IFJFV0FSRFNbY29kZV07CgogICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRC
+eUlkKCJyZXdhcmRCb3giKS5jbGFzc0xpc3QucmVtb3ZlKCJoaWRkZW4iKTsKCiAgICB9ZWxzZXsK
+CiAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJlc3VsdCIpLnN0eWxlLmNvbG9yID0g
+InJlZCI7CiAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJlc3VsdCIpLmlubmVySFRN
+TCA9ICLinYwgTcOjIHNhaSEiOwoKICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmV3
+YXJkQm94IikuY2xhc3NMaXN0LmFkZCgiaGlkZGVuIik7CiAgICB9Cn0KZnVuY3Rpb24gY29weUxp
+bmsoKXsKIGNvbnN0IGlucHV0PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyZXdhcmRMaW5rIik7
+CiBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dChpbnB1dC52YWx1ZSk7CiBhbGVydCgixJDD
+oyBzYW8gY2jDqXAgbGluayEiKTsKfQo8L3NjcmlwdD4KPC9ib2R5PjwvaHRtbD4
