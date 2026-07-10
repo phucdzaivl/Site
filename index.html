@@ -24,13 +24,13 @@ input{padding:10px;width:220px;border-radius:10px;border:1px solid #ccc;text-ali
 <button id="checkBtn" onclick="checkCode()">Xác nhận</button>
 <p id="result"></p>
 <div id="rewardBox" class="hidden">
-<input id="rewardLink" readonly value="https://link-phan-thuong.com"><br>
+<input id="rewardLink" readonly value="">
 <button id="copyBtn" onclick="copyLink()">📋 Sao chép Link</button>
 </div>
 </div>
 </div>
 <script>
-const CON_MAY=false;
+const CON_MAY=true;
 const REWARDS = {
     "idknguhaha": "https://link1.com",
     "nguvailoz": "https://link2.com",
@@ -41,7 +41,7 @@ const REWARDS = {
 function getLink(){
  document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
  document.getElementById("claim").disabled=false;
- window.open("https://example.com","_blank");
+ window.open("https://notevn.com/share/uv7azxu0","_blank");
 }
 function claim(){
  if(!CON_MAY){alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");return;}
