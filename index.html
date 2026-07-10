@@ -31,13 +31,13 @@ input{padding:10px;width:220px;border-radius:10px;border:1px solid #ccc;text-ali
 </div>
 <script>
 const CON_MAY=true;
-const CODES = [
-    "idknguhaha",
-    "nguvailoz",
-    "kk",
-    "memaybeo",  
-    "nhincc", 
-];
+const REWARDS = {
+    "idknguhaha": "https://link1.com",
+    "nguvailoz": "https://link2.com",
+    "kk": "https://link3.com",
+    "memaybeo": "https://link4.com",
+    "nhincc": "https://link5.com"
+};
 function getLink(){
  document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
  document.getElementById("claim").disabled=false;
@@ -54,12 +54,15 @@ function checkCode(){
 
     let code = document.getElementById("giftCode").value.trim();
 
-    if(CODES.includes(code)){
+    if(REWARDS[code]){
 
         localStorage.setItem("lastClaim", new Date().toDateString());
 
         document.getElementById("result").style.color = "green";
         document.getElementById("result").innerHTML = "✅ Mã đúng!";
+
+        // Hiện đúng link của mã đó
+        document.getElementById("rewardLink").value = REWARDS[code];
 
         document.getElementById("rewardBox").classList.remove("hidden");
 
