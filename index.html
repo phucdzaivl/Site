@@ -4,107 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nhận Quà</title>
-
 <style>
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#6a11cb,#2575fc);
-}
-
-.box{
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    width:320px;
-}
-
-button{
-    width:220px;
-    padding:14px;
-    margin:10px;
-    border:none;
-    border-radius:30px;
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-#getLink{
-    background:#ff9800;
-}
-
-#claim{
-    background:#4CAF50;
-}
-
-button:disabled{
-    background:#999;
-    cursor:not-allowed;
-}
-
-button:hover:not(:disabled){
-    transform:scale(1.05);
-}
-
-#msg{
-    margin-top:15px;
-    font-weight:bold;
-}
+body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial,sans-serif;background:linear-gradient(135deg,#6a11cb,#2575fc)}
+.box{background:#fff;padding:35px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);width:340px}
+button{width:220px;padding:14px;margin:10px;border:none;border-radius:30px;color:#fff;font-size:18px;cursor:pointer}
+#getLink{background:#ff9800}#claim,#checkBtn,#copyBtn{background:#4CAF50}
+button:disabled{background:#999}.hidden{display:none}
+input{padding:10px;width:220px;border-radius:10px;border:1px solid #ccc;text-align:center}
 </style>
 </head>
 <body>
-
 <div class="box">
 <h2>🎁 Nhận Quà</h2>
-
 <button id="getLink" onclick="getLink()">🔗 Get Link</button>
-
 <button id="claim" onclick="claim()" disabled>🎉 Nhận Quà</button>
-
 <p id="msg"></p>
-
+<div id="claimBox" class="hidden">
+<input id="giftCode" placeholder="Nhập mã"><br>
+<button id="checkBtn" onclick="checkCode()">Xác nhận</button>
+<p id="result"></p>
+<div id="rewardBox" class="hidden">
+<input id="rewardLink" readonly value="https://link-phan-thuong.com"><br>
+<button id="copyBtn" onclick="copyLink()">📋 Sao chép Link</button>
 </div>
-
+</div>
+</div>
 <script>
-    // true = còn máy, false= hết máy ,//
-const CON_MAY = true;
+const CON_MAY=true;
+const CODES = [
+    "idknguhaha",
+    "nguvailoz",
+    "kk",
+    "memaybeo",  
+    "nhincc", 
+];
 function getLink(){
-    document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
-    document.getElementById("claim").disabled=false;
-
-    // Thay link này bằng link của bạn
-    window.open("https://example.com","_blank");
+ document.getElementById("msg").innerHTML="✅ Lấy link thành công!";
+ document.getElementById("claim").disabled=false;
+ window.open("https://example.com","_blank");
 }
-
 function claim(){
+ if(!CON_MAY){alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");return;}
+ let last=localStorage.getItem("lastClaim");
+ let today=new Date().toDateString();
+ if(last===today){alert("Bạn đã nhận quà hôm nay rồi!");return;}
+ document.getElementById("claimBox").classList.remove("hidden");
+}
+function checkCode(){
 
-    if(!CON_MAY){
-        alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");
-        return;
+    let code = document.getElementById("giftCode").value.trim();
+
+    if(CODES.includes(code)){
+
+        localStorage.setItem("lastClaim", new Date().toDateString());
+
+        document.getElementById("result").style.color = "green";
+        document.getElementById("result").innerHTML = "✅ Mã đúng!";
+
+        document.getElementById("rewardBox").classList.remove("hidden");
+
+    }else{
+
+        document.getElementById("result").style.color = "red";
+        document.getElementById("result").innerHTML = "❌ Mã sai!";
+
+        document.getElementById("rewardBox").classList.add("hidden");
     }
-
-    let last = localStorage.getItem("lastClaim");
-    let today = new Date().toDateString();
-
-    if(last === today){
-        alert("Bạn đã nhận quà hôm nay rồi!");
-        return;
-    }
-
-    localStorage.setItem("lastClaim", today);
-
-    // Link phần thưởng
-window.location.href = "https://link-phan-thuong.com";
+}
+function copyLink(){
+ const input=document.getElementById("rewardLink");
+ navigator.clipboard.writeText(input.value);
+ alert("Đã sao chép link!");
 }
 </script>
-
-</body>
-</html>
+</body></html>
