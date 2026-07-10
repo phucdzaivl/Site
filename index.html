@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 🎁Nhận Code Ugphone 4h Free (By Phuc Ngo) 🎁 </title>
+<title>🎁Nhận Code Ugphone 4h Free (By Phuc Ngo)🎁</title>
 <style>
 body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial,sans-serif;background:linear-gradient(135deg,#6a11cb,#2575fc)}
 .box{background:#fff;padding:35px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25);width:340px}
@@ -15,7 +15,7 @@ input{padding:10px;width:220px;border-radius:10px;border:1px solid #ccc;text-ali
 </head>
 <body>
 <div class="box">
-<h2>🎁 Nhận Code Ugphone 4h Free</h2>
+<h2>🎁 Nhận Quà</h2>
 <button id="getLink" onclick="getLink()">🔗 Get Link</button>
 <button id="claim" onclick="claim()" disabled>🎉 Nhận Code</button>
 <p id="msg"></p>
@@ -47,7 +47,7 @@ function claim(){
  if(!CON_MAY){alert("❌ Đã hết máy! Vui lòng chờ Admin thêm máy.");return;}
  let last=localStorage.getItem("lastClaim");
  let today=new Date().toDateString();
- if(last===today){alert("Bạn đã nhận quà hôm nay rồi!");return;}
+ if(last===today){alert("Bạn đã nhận code hôm nay rồi!");return;}
  document.getElementById("claimBox").classList.remove("hidden");
 }
 function checkCode(){
